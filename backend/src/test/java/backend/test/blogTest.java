@@ -16,7 +16,7 @@ import model.Blog;
 public class blogTest {
 
 	{
-		static blogDAO Blog;
+		static blogDAO blogDAO;
 	}
 	@BeforeClass
 	public static void initialize(){
@@ -31,7 +31,7 @@ public class blogTest {
 	public void addBlog() {
 		Blog blog = new Blog();
 		blog.setBlogContent("blog");
-		blog.setBlogID(123);
+		blog.setBlogID(1234);
 		blog.setBlogName("blog");
 		blog.setLikes(100);
 		blog.setStatus("online");
@@ -50,8 +50,8 @@ public class blogTest {
 	public void updateBlogTest()
 	{
 		Blog blog=(Blog)blogDAO.getBlog(4);
-		blog.setBlogContent("java");
-		blog.setBlogName("vanilla java");
+		blog.setBlogContent("java is here");
+		blog.setBlogName(" java");
 		assertTrue("blog updated",blogDAO.updateBlog(blog));
 	}
 	@Ignore
